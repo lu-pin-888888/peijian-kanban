@@ -101,19 +101,19 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
     <h1>🔧 配件到货监控看板</h1>
     <div style="font-size:13px;opacity:0.85;margin-top:4px;">东莞腾达红旗体验中心 · 事故车/索赔/自费配件跟踪</div>
   </div>
-  <div class="time">数据更新: 2026-07-03 14:07</div>
+  <div class="time">数据更新: 2026-07-03 19:08</div>
 </div>
 
 <div class="kpi-row">
   <div class="kpi-card">
     <div class="label">📋 待处理车辆</div>
-    <div class="value" style="color:#1B5E20;">78</div>
+    <div class="value" style="color:#1B5E20;">79</div>
     <div class="sub">台车等待配件</div>
   </div>
   <div class="kpi-card">
     <div class="label">✅ 配件就绪率</div>
-    <div class="value" style="color:#FD7E14;">64%</div>
-    <div class="sub">372/579 件已就绪</div>
+    <div class="value" style="color:#FD7E14;">66%</div>
+    <div class="sub">381/580 件已就绪</div>
   </div>
   <div class="kpi-card clickable" onclick="toggleKpiDetail('logistics-detail', this)">
     <div class="label">🚚 物流中配件 <span class="expand-icon" id="logistics-expand">▼</span></div>
@@ -122,13 +122,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
   </div>
   <div class="kpi-card">
     <div class="label">📦 卡派已出库</div>
-    <div class="value" style="color:#198754;">221</div>
+    <div class="value" style="color:#198754;">257</div>
     <div class="sub">维修领料已出</div>
   </div>
   <div class="kpi-card">
     <div class="label">⚠️ 库存冲突</div>
-    <div class="value" style="color:#DC3545;">7</div>
-    <div class="sub">有7种配件库存不足</div>
+    <div class="value" style="color:#DC3545;">8</div>
+    <div class="sub">有8种配件库存不足</div>
   </div>
 </div>
 
@@ -136,12 +136,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
 <div class="conflict-banner" id="conflictBanner">
   <h3>⚠️ 库存冲突提醒 — 以下配件库存不足，已按优先级分配</h3>
   <ul>
-    <li><strong>右前翼子板</strong>（8403352HF01S2）：库存1件，需求2件 → 分配给 LFPH4ACP2R2B54297；<span style="color:#DC3545">LFPH3ACEXS2A96284 需等订货</span></li>
     <li><strong>发动机底护板总成</strong>（5006330HF02A）：库存1件，需求2件 → 分配给 LFPH3ACE1P2B21645；<span style="color:#DC3545">LFPH3ACE4R2C61093 需等订货</span></li>
     <li><strong>右前翼子板支架I总成</strong>（8403660HF01S2）：库存1件，需求2件 → 分配给 LFPH3ACEXS2A96284；<span style="color:#DC3545">LFPH3ACE4R2C61093 需等订货</span></li>
     <li><strong>前翼子板支架II总成</strong>（8403565HF01S2）：库存2件，需求3件 → 分配给 LFPH3ACEXS2A96284；<span style="color:#DC3545">LFPH3ACE4R2C61093 需等订货</span></li>
     <li><strong>低音喇叭带支架总成</strong>（3721050HF01A）：库存1件，需求2件 → 分配给 LFPH3ACEXS2A96284；<span style="color:#DC3545">LFPH3ACE4R2C61093 需等订货</span></li>
     <li><strong>前下导风板</strong>（5006637HF01）：库存1件，需求2件 → 分配给 LFPH3ACEXS2A96284；<span style="color:#DC3545">LFPH3ACE4R2C61093 需等订货</span></li>
+    <li><strong>散热器格栅左上装饰板总成 （底漆）</strong>（8401675HF01BS1）：库存1件，需求2件 → 分配给 LFPH3ACE8P2B31685；<span style="color:#DC3545">LFPH3ACEXS2A96284 需等订货</span></li>
+    <li><strong>前保险杠左装饰条I-亮光镀铬</strong>（2803151HF01004P）：库存1件，需求2件 → 分配给 LFPH4ACP3P2A21822；<span style="color:#DC3545">LFPH3ACEXS2A96284 需等订货</span></li>
     <li><strong>前保险杠左导流件总成-高亮黑</strong>（2803405HF01885）：库存1件，需求2件 → 分配给 LFPH3ACE8P2B31685；<span style="color:#DC3545">LFPH3ACEXS2A96284 需等订货</span></li>
   </ul>
 </div>
@@ -149,7 +150,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
 <div class="session">
   <div class="session-header">
     <span>📊 车辆配件状态明细</span>
-    <span class="badge" style="background:#E8F5E9;color:#1B5E20;">共 78 台</span>
+    <span class="badge" style="background:#E8F5E9;color:#1B5E20;">共 79 台</span>
   </div>
   <div class="filter-bar">
     <select id="filterType" onchange="applyFilter()">
@@ -441,7 +442,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存3件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存1件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
               </tr></tbody></table></td></tr>
       <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SX3T37" data-vin="LFPH3ACE8P2B31685" data-orderdate="06/20" data-waitdays="13">
         <td><button class="expand-btn" id="btn-expand-4" onclick="toggleDetail(4,event)" ontouchend="toggleDetail(4,event)">▶</button></td>
@@ -1292,7 +1293,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存3件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存1件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
               </tr></tbody></table></td></tr>
       <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S9980Y" data-vin="LFPH4ACP1R2B77277" data-orderdate="06/23" data-waitdays="10">
         <td><button class="expand-btn" id="btn-expand-11" onclick="toggleDetail(11,event)" ontouchend="toggleDetail(11,event)">▶</button></td>
@@ -1474,11 +1475,11 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
         <td>06/24</td>
         <td><span style="color:#DC3545;font-weight:700;">9天</span></td>
         <td>47</td>
-        <td>44</td>
+        <td>41</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:94%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">94%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:87%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">87%</span>
           </div>
         </td>
         <td><span class="tag tag-partial">🟡 部分就绪</span></td>
@@ -1518,7 +1519,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存3件 · 货位:2B02-04-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-04-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存2件 · 货位:2B02-04-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-04-01</span></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -1526,10 +1527,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前翼子板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#DC354520;color:#DC3545;">库存不足</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">⚠️ 库存1件已被占用 · 总需求2件 · 需等订货 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -1592,10 +1593,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠缓冲梁</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存2件 · 货位:C01-03-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C01-03-09</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -1672,7 +1673,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存3件 · 货位:C02-02-01</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存2件 · 货位:C02-02-01</td>
               </tr>
               <tr>
                 <td>17</td>
@@ -1749,7 +1750,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存5件 · 货位:A08-03-01</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存3件 · 货位:A08-03-01</td>
               </tr>
               <tr>
                 <td>24</td>
@@ -1760,7 +1761,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存6件 · 货位:A08-03-02</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存4件 · 货位:A08-03-02</td>
               </tr>
               <tr>
                 <td>25</td>
@@ -1815,7 +1816,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/30 · 库存3件 · 货位:2A05-01-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/30 · 库存1件 · 货位:2A05-01-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-02</span></td>
               </tr>
               <tr>
                 <td>30</td>
@@ -1823,10 +1824,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>散热器格栅左上装饰板总成 （底漆）</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#DC354520;color:#DC3545;">库存不足</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存3件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">⚠️ 库存1件已被占用 · 总需求2件 · 需等订货 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
               </tr>
               <tr>
                 <td>31</td>
@@ -1955,10 +1956,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠左装饰条I-亮光镀铬</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#DC354520;color:#DC3545;">库存不足</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/03 · 库存2件 · 货位:2A03-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">⚠️ 库存1件已被占用 · 总需求2件 · 需等订货 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
               </tr>
               <tr>
                 <td>43</td>
@@ -2089,7 +2090,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/03 · 库存2件 · 货位:2A03-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/03 · 库存1件 · 货位:2A03-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -2395,11 +2396,11 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
         <td>06/24</td>
         <td><span style="color:#DC3545;font-weight:700;">9天</span></td>
         <td>32</td>
-        <td>29</td>
+        <td>30</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:91%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">91%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:94%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">94%</span>
           </div>
         </td>
         <td><span class="tag tag-partial">🟡 部分就绪</span></td>
@@ -2502,10 +2503,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>后保险杠横梁总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">-</td>
-                <td style="font-size:11px;color:#DC3545;"></td>
+                <td style="font-size:11px;">编码</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/03 · 库存1件 · 货位: · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804510HF01P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/</span></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -3659,7 +3660,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存3件 · 货位:2A03-02-04</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存2件 · 货位:2A03-02-04</td>
               </tr>
               <tr>
                 <td>5</td>
@@ -4249,7 +4250,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存1件 · 货位:大修房</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘D771B8" data-vin="LFPH4ACP2R2B54297" data-orderdate="06/27" data-waitdays="6">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="湘D771B8" data-vin="LFPH4ACP2R2B54297" data-orderdate="06/27" data-waitdays="6">
         <td><button class="expand-btn" id="btn-expand-37" onclick="toggleDetail(37,event)" ontouchend="toggleDetail(37,event)">▶</button></td>
         <td><strong>湘D771B8</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP2R2B54297</td>
@@ -4257,19 +4258,19 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
         <td>06/27</td>
         <td><span style="color:#FD7E14;font-weight:600;">6天</span></td>
         <td>12</td>
-        <td>12</td>
+        <td>11</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:100%;background:#198754;"></div></div>
-            <span style="font-weight:600;font-size:12px;">100%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:92%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">92%</span>
           </div>
         </td>
-        <td><span class="tag tag-ready">✅ 可开工</span></td>
+        <td><span class="tag tag-partial">🟡 部分就绪</span></td>
       </tr>
       <tr class="part-detail" id="detail-37">
         <td colspan="10" style="padding:0;">
-          <table style="margin:0;border-collapse:collapse;border-left:4px solid #198754;">
-            <thead><tr style="background:#D4EDDA;">
+          <table style="margin:0;border-collapse:collapse;border-left:4px solid #FD7E14;">
+            <thead><tr style="background:#FFF3CD;">
               <th style="width:30px;"></th>
               <th>原厂编码</th>
               <th>替代码</th>
@@ -4298,10 +4299,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前组合灯Ⅰ总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/27 · 库存1件 · 货位:大修房02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房02</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:06/29 · 消化库存</td>
               </tr>
               <tr>
                 <td>3</td>
@@ -4309,10 +4310,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前翼子板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/02 · 库存1件 · 货位:Z-翼子板区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -4334,7 +4335,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-05-02</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A03-05-02</td>
               </tr>
               <tr>
                 <td>6</td>
@@ -4345,7 +4346,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A02-05-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A02-05-10</td>
               </tr>
               <tr>
                 <td>7</td>
@@ -4400,7 +4401,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存3件 · 货位:2A02-03-03</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存2件 · 货位:2A02-03-03</td>
               </tr>
               <tr>
                 <td>12</td>
@@ -5064,7 +5065,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/29 · 库存3件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/29 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -5086,7 +5087,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存3件 · 货位:2A03-02-04</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存2件 · 货位:2A03-02-04</td>
               </tr>
               <tr>
                 <td>4</td>
@@ -5119,7 +5120,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存4件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存3件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
               </tr>
               <tr>
                 <td>7</td>
@@ -5130,7 +5131,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存6件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存5件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
               </tr>
               <tr>
                 <td>8</td>
@@ -5138,10 +5139,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠右格栅-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/25 · 库存4件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-04-06</td>
               </tr>
               <tr>
                 <td>9</td>
@@ -5152,7 +5153,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存4件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -5163,7 +5164,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-05-02</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A03-05-02</td>
               </tr>
               <tr>
                 <td>11</td>
@@ -5174,7 +5175,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A02-05-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A02-05-10</td>
               </tr>
               <tr>
                 <td>12</td>
@@ -5185,7 +5186,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存6件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存5件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
               </tr></tbody></table></td></tr>
       <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤BG79928" data-vin="LFPH4CPP2R1B03376" data-orderdate="06/28" data-waitdays="5">
         <td><button class="expand-btn" id="btn-expand-45" onclick="toggleDetail(45,event)" ontouchend="toggleDetail(45,event)">▶</button></td>
@@ -6068,7 +6069,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存4件 · 货位:2A02-06-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存3件 · 货位:2A02-06-10</td>
               </tr>
               <tr>
                 <td>2</td>
@@ -6132,11 +6133,11 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
         <td>06/30</td>
         <td><span style="color:#FD7E14;font-weight:600;">3天</span></td>
         <td>43</td>
-        <td>31</td>
+        <td>36</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:72%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">72%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:84%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">84%</span>
           </div>
         </td>
         <td><span class="tag tag-partial">🟡 部分就绪</span></td>
@@ -6163,9 +6164,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠面罩（底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存6件 · 货位:索-大货架03-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存5件 · 货位:索-大货架03-10</td>
               </tr>
               <tr>
                 <td>2</td>
@@ -6174,9 +6175,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠右侧支架</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存3件 · 货位:2A02-03-03</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存2件 · 货位:2A02-03-03</td>
               </tr>
               <tr>
                 <td>3</td>
@@ -6185,9 +6186,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠右导流件总成-高亮黑</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存4件 · 货位:2A02-06-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存3件 · 货位:2A02-06-10</td>
               </tr>
               <tr>
                 <td>4</td>
@@ -6195,10 +6196,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠右格栅-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/25 · 库存4件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-04-06</td>
               </tr>
               <tr>
                 <td>5</td>
@@ -6207,9 +6208,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠右支撑板I</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存6件 · 货位:2A02-05-09</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存5件 · 货位:2A02-05-09</td>
               </tr>
               <tr>
                 <td>6</td>
@@ -6218,9 +6219,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠右支撑板II</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存4件 · 货位:2A03-05-01</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存3件 · 货位:2A03-05-01</td>
               </tr>
               <tr>
                 <td>7</td>
@@ -6229,9 +6230,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠左支撑板I</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A02-05-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A02-05-10</td>
               </tr>
               <tr>
                 <td>8</td>
@@ -6240,9 +6241,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠左支撑板II</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-05-02</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A03-05-02</td>
               </tr>
               <tr>
                 <td>9</td>
@@ -6251,7 +6252,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠左装饰条I-亮光镀铬</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A03-03-04) | DMS: 广州库</span></td>
               </tr>
@@ -6262,9 +6263,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠中装饰条I-亮光镀铬</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存3件 · 货位:2A03-02-04</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存2件 · 货位:2A03-02-04</td>
               </tr>
               <tr>
                 <td>11</td>
@@ -6273,7 +6274,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠右装饰条I-亮光镀铬</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±2天)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A03-03-03) | DMS: 广州库</span></td>
               </tr>
@@ -6284,7 +6285,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠拖车钩盖（底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A01-06-09) | DMS: 广州库</span></td>
               </tr>
@@ -6295,7 +6296,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠中支架</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C02-02-02) | DMS: 广州库</span></td>
               </tr>
@@ -6306,7 +6307,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠下格栅-高亮黑</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±2天)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A03-05-05) | DMS: 广州库</span></td>
               </tr>
@@ -6317,9 +6318,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前角超声波传感器支架（底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存4件 · 货位:2B02-02-09</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存3件 · 货位:2B02-02-09</td>
               </tr>
               <tr>
                 <td>16</td>
@@ -6328,9 +6329,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>左前角超声波传感器支架（底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存6件 · 货位:2B02-03-06</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存5件 · 货位:2B02-03-06</td>
               </tr>
               <tr>
                 <td>17</td>
@@ -6339,7 +6340,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前向毫米波雷达总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A03-05-10) | DMS: 广州库</span></td>
               </tr>
@@ -6350,9 +6351,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠线束总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A02-01-09) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>19</td>
@@ -6383,7 +6384,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前格栅旗标灯总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A02-06-01) | DMS: 广州库</span></td>
               </tr>
@@ -6394,9 +6395,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>散热器格栅总成-高亮黑</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/06 · 库存2件 · 货位:Z-中网区</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/06 · 库存1件 · 货位:Z-中网区</td>
               </tr>
               <tr>
                 <td>23</td>
@@ -6405,7 +6406,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>散热器格栅左上装饰板总成 （底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A05-01-01) | DMS: 广州库</span></td>
               </tr>
@@ -6416,7 +6417,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>散热器格栅右上装饰板总成 （底漆）</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A05-01-02) | DMS: 广州库</span></td>
               </tr>
@@ -6427,7 +6428,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>散热器格栅左装饰件-亮光镀铬</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#FFC10720;color:#FFC107;">已订货未到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A02-02-04)</span></td>
               </tr>
@@ -6438,7 +6439,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>散热器格栅右装饰件-亮光镀铬</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#FFC10720;color:#FFC107;">已订货未到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A02-03-05)</span></td>
               </tr>
@@ -6449,7 +6450,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前组合灯Ⅲ总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A05-01-03) | DMS: 广州库</span></td>
               </tr>
@@ -6460,7 +6461,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>左前中超声波传感器支架</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#FFC10720;color:#FFC107;">已订货未到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A08-03-02)</span></td>
               </tr>
@@ -6471,7 +6472,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前中超声波传感器支架</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#FFC10720;color:#FFC107;">已订货未到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A08-03-01)</span></td>
               </tr>
@@ -6482,7 +6483,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前格栅线束总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B02-05-12) | DMS: 广州库</span></td>
               </tr>
@@ -6493,9 +6494,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前置摄像头及其支架总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A07-02-01) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>32</td>
@@ -6504,9 +6505,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前翼子板</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/Z-翼子板区) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>33</td>
@@ -6515,7 +6516,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前翼子板连接板总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B02-04-01) | DMS: 广州库</span></td>
               </tr>
@@ -6526,9 +6527,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>右前轮防护罩总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索赔房) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>35</td>
@@ -6537,9 +6538,9 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠缓冲梁</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C01-03-09) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>36</td>
@@ -6548,7 +6549,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>前保险杠上支架I总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#FFC10720;color:#FFC107;">已订货未到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C02-02-01)</span></td>
               </tr>
@@ -6558,10 +6559,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠行人护板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/29 · 库存3件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/29 · 库存2件 · 货位:索-大货架02-08</td>
               </tr>
               <tr>
                 <td>38</td>
@@ -6581,7 +6582,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td>发动机底护板总成</td>
                 <td>1</td>
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
-                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/Z-7号) | DMS: 广州库</span></td>
               </tr>
@@ -7397,7 +7398,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/20 · 库存1件 · 货位:大修房01</td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/03 · 消化库存</td>
               </tr>
               <tr>
                 <td>6</td>
@@ -7943,7 +7944,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码+日期(±2天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C01-03-09) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>24</td>
@@ -8108,7 +8109,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码+日期(±2天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索赔房) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>39</td>
@@ -8174,7 +8175,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码+日期(±2天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/Z-翼子板区) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>45</td>
@@ -8273,7 +8274,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存4件 · 货位:2B02-02-09</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存3件 · 货位:2B02-02-09</td>
               </tr>
               <tr>
                 <td>54</td>
@@ -8284,7 +8285,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存6件 · 货位:2B02-03-06</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/05/17 · 库存5件 · 货位:2B02-03-06</td>
               </tr>
               <tr>
                 <td>55</td>
@@ -8303,10 +8304,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠行人护板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/29 · 库存3件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/29 · 库存2件 · 货位:索-大货架02-08</td>
               </tr>
               <tr>
                 <td>57</td>
@@ -8328,7 +8329,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存3件 · 货位:2A03-02-04</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/07 · 库存2件 · 货位:2A03-02-04</td>
               </tr>
               <tr>
                 <td>59</td>
@@ -8336,10 +8337,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠右装饰条I-亮光镀铬</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/30 · 库存5件 · 货位:2A03-03-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-03</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/30 · 库存4件 · 货位:2A03-03-03</td>
               </tr>
               <tr>
                 <td>60</td>
@@ -8350,7 +8351,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-05-02</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A03-05-02</td>
               </tr>
               <tr>
                 <td>61</td>
@@ -8361,7 +8362,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A02-05-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存2件 · 货位:2A02-05-10</td>
               </tr>
               <tr>
                 <td>62</td>
@@ -8394,7 +8395,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存4件 · 货位:2A03-05-01</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存3件 · 货位:2A03-05-01</td>
               </tr>
               <tr>
                 <td>65</td>
@@ -8405,7 +8406,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存6件 · 货位:2A02-05-09</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存5件 · 货位:2A02-05-09</td>
               </tr>
               <tr>
                 <td>66</td>
@@ -8416,7 +8417,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存4件 · 货位:2A02-06-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存3件 · 货位:2A02-06-10</td>
               </tr>
               <tr>
                 <td>67</td>
@@ -8424,10 +8425,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前保险杠右格栅-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/25 · 库存4件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/25 · 库存3件 · 货位:2A03-04-06</td>
               </tr>
               <tr>
                 <td>68</td>
@@ -8438,7 +8439,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存3件 · 货位:2A02-03-03</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/11 · 库存2件 · 货位:2A02-03-03</td>
               </tr>
               <tr>
                 <td>69</td>
@@ -8449,7 +8450,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存6件 · 货位:索-大货架03-10</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存5件 · 货位:索-大货架03-10</td>
               </tr></tbody></table></td></tr>
       <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SC12T6" data-vin="LFPH4BCP6N2L24612" data-orderdate="07/02" data-waitdays="1">
         <td><button class="expand-btn" id="btn-expand-70" onclick="toggleDetail(70,event)" ontouchend="toggleDetail(70,event)">▶</button></td>
@@ -9058,10 +9059,53 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
+              </tr></tbody></table></td></tr>
+      <tr class="car-row" data-type="未分类" data-status="waiting" data-plate="粤S7AH91" data-vin="LFPH4ACL6S2A40628" data-orderdate="07/03" data-waitdays="0">
+        <td><button class="expand-btn" id="btn-expand-78" onclick="toggleDetail(78,event)" ontouchend="toggleDetail(78,event)">▶</button></td>
+        <td><strong>粤S7AH91</strong></td>
+        <td style="font-family:monospace;font-size:11px;">LFPH4ACL6S2A40628</td>
+        <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
+        <td>07/03</td>
+        <td><span style="color:#999;">-</span></td>
+        <td>1</td>
+        <td>0</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#DC3545;"></div></div>
+            <span style="font-weight:600;font-size:12px;">0%</span>
+          </div>
+        </td>
+        <td><span class="tag tag-waiting">🔴 等待配件</span></td>
+      </tr>
+      <tr class="part-detail" id="detail-78">
+        <td colspan="10" style="padding:0;">
+          <table style="margin:0;border-collapse:collapse;border-left:4px solid #DC3545;">
+            <thead><tr style="background:#F8D7DA;">
+              <th style="width:30px;"></th>
+              <th>原厂编码</th>
+              <th>替代码</th>
+              <th>配件名称</th>
+              <th>需求数量</th>
+              <th>匹配结果</th>
+              <th>出库状态</th>
+              <th>匹配方式</th>
+              <th>详情</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td style="font-family:monospace;font-size:11px;">5407575HF11DC07</td>
+                <td style="font-family:monospace;font-size:11px;">-</td>
+                <td>左前门装饰盖板总成-深灰色亮光镀铬</td>
+                <td>1</td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span style="font-size:11px;color:#999;">-</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr></tbody></table></div>
 
 <footer>
-  配件到货监控系统 v2.1 · 东莞腾达红旗体验中心 · 数据更新: 2026-07-03 14:07<br>
+  配件到货监控系统 v2.1 · 东莞腾达红旗体验中心 · 数据更新: 2026-07-03 19:08<br>
   <span style="font-size:10px;">四层匹配: ①卡派出库(plate+VIN) → ②DMS紧急(plate) → ③DMS常规(±2d) → ④库存(卡派)</span>
 </footer>
 
