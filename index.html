@@ -42,7 +42,7 @@ tr:hover { background:#F8FAFB; }
 .part-detail td { background:#FAFBFC; font-size:12px; padding:6px 12px; }
 .expand-btn { cursor:pointer; color:#1B5E20; font-weight:600; font-size:18px; user-select:none; background:none; border:1px solid #1B5E2040; border-radius:6px; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center; line-height:1; -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
 .expand-btn:active { background:#D4EDDA; }
-.conflict-banner { margin:16px 32px; background:#FFF3CD; border:1px solid #FFC107; border-radius:10px; padding:14px 20px; display:block; }
+.conflict-banner { margin:16px 32px; background:#FFF3CD; border:1px solid #FFC107; border-radius:10px; padding:14px 20px; display:none; }
 .conflict-banner h3 { color:#856404; font-size:15px; margin-bottom:8px; }
 .conflict-banner ul { list-style:none; padding:0; }
 .conflict-banner li { font-size:13px; padding:4px 0; color:#856404; }
@@ -101,7 +101,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
     <h1>🔧 配件到货监控看板</h1>
     <div style="font-size:13px;opacity:0.85;margin-top:4px;">东莞腾达红旗体验中心 · 事故车/索赔/自费配件跟踪</div>
   </div>
-  <div class="time">数据更新: 2026-07-17 10:00</div>
+  <div class="time">数据更新: 2026-07-19 10:00</div>
 </div>
 
 <div class="kpi-row">
@@ -113,7 +113,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
   <div class="kpi-card">
     <div class="label">✅ 配件就绪率</div>
     <div class="value" style="color:#198754;">87%</div>
-    <div class="sub">510/583 件已就绪</div>
+    <div class="sub">508/583 件已就绪</div>
   </div>
   <div class="kpi-card clickable" onclick="toggleKpiDetail('logistics-detail', this)">
     <div class="label">🚚 物流中配件 <span class="expand-icon" id="logistics-expand">▼</span></div>
@@ -127,8 +127,8 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
   </div>
   <div class="kpi-card">
     <div class="label">⚠️ 库存冲突</div>
-    <div class="value" style="color:#DC3545;">1</div>
-    <div class="sub">有1种配件库存不足</div>
+    <div class="value" style="color:#198754;">0</div>
+    <div class="sub">无冲突</div>
   </div>
 </div>
 
@@ -156,7 +156,6 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
 <div class="conflict-banner" id="conflictBanner">
   <h3>⚠️ 库存冲突提醒 — 以下配件库存不足，已按优先级分配</h3>
   <ul>
-    <li><strong>右前翼子板</strong>（8403352HF01S2）：库存1件，需求2件 → 分配给 LFPH3ACEXS2A96284；<span style="color:#DC3545">LFPH4ACP2R2B54297 需等订货</span></li>
   </ul>
 </div>
 
@@ -208,13 +207,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
     </thead>
     <tbody>
 
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤BG79928" data-vin="LFPH4CPP2R1B03376" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤BG79928" data-vin="LFPH4CPP2R1B03376" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-0" onclick="toggleDetail(0,event)" ontouchend="toggleDetail(0,event)">▶</button></td>
         <td><strong>粤BG79928</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4CPP2R1B03376</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -251,13 +250,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S29A6R" data-vin="LFPH3ACPXM1B27947" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S29A6R" data-vin="LFPH3ACPXM1B27947" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-1" onclick="toggleDetail(1,event)" ontouchend="toggleDetail(1,event)">▶</button></td>
         <td><strong>粤S29A6R</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACPXM1B27947</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -294,13 +293,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/29 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S5A5V5" data-vin="LFPH3ACEXS2A96284" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S5A5V5" data-vin="LFPH3ACEXS2A96284" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-2" onclick="toggleDetail(2,event)" ontouchend="toggleDetail(2,event)">▶</button></td>
         <td><strong>粤S5A5V5</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACEXS2A96284</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>47</td>
         <td>47</td>
         <td>
@@ -332,10 +331,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前翼子板支架I总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:07/05 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2B02-01-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-08</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -346,7 +345,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存4件 · 货位:2B02-04-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-04-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2B02-04-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-04-01</span></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -357,7 +356,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/15 · 库存1件 · 货位:Z-翼子板区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位:Z-翼子板区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -401,7 +400,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2B02-02-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2B02-02-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-05</span></td>
               </tr>
               <tr>
                 <td>8</td>
@@ -456,7 +455,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:2B01-04-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B01-04-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2B01-04-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B01-04-05</span></td>
               </tr>
               <tr>
                 <td>13</td>
@@ -467,7 +466,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存4件 · 货位:C01-03-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C01-03-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存3件 · 货位:C01-03-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C01-03-02</span></td>
               </tr>
               <tr>
                 <td>14</td>
@@ -478,7 +477,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:C02-03-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-03-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:C02-03-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-03-01</span></td>
               </tr>
               <tr>
                 <td>15</td>
@@ -489,7 +488,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存6件 · 货位:C01-01-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C01-01-03</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:C01-01-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C01-01-03</span></td>
               </tr>
               <tr>
                 <td>16</td>
@@ -500,7 +499,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:C02-02-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-02-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:C02-02-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-02-01</span></td>
               </tr>
               <tr>
                 <td>17</td>
@@ -511,7 +510,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/07 · 库存2件 · 货位:2B02-01-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/07 · 库存1件 · 货位:2B02-01-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-08</span></td>
               </tr>
               <tr>
                 <td>18</td>
@@ -533,7 +532,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2B02-01-16 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-16</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:2B02-01-16 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-16</span></td>
               </tr>
               <tr>
                 <td>20</td>
@@ -544,7 +543,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:A02-08-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A02-08-11</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存4件 · 货位:A02-08-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A02-08-11</span></td>
               </tr>
               <tr>
                 <td>21</td>
@@ -563,10 +562,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前置摄像头及其支架总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:办公室货架-03-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/办公室货架-03-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/05 · 消化库存</td>
               </tr>
               <tr>
                 <td>23</td>
@@ -621,7 +620,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A02-03-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-03-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-03-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-03-05</span></td>
               </tr>
               <tr>
                 <td>28</td>
@@ -632,7 +631,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-02-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:2A02-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-02-04</span></td>
               </tr>
               <tr>
                 <td>29</td>
@@ -643,7 +642,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A05-01-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A05-01-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-02</span></td>
               </tr>
               <tr>
                 <td>30</td>
@@ -654,7 +653,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2A05-01-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A05-01-01</span></td>
               </tr>
               <tr>
                 <td>31</td>
@@ -665,7 +664,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2A02-02-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-02-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:2A02-02-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-02-07</span></td>
               </tr>
               <tr>
                 <td>32</td>
@@ -673,10 +672,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>散热器格栅总成-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:大修房01 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(8401550HF01A885.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房01</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/05 · 消化库存</td>
               </tr>
               <tr>
                 <td>33</td>
@@ -698,7 +697,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存5件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
               </tr>
               <tr>
                 <td>35</td>
@@ -731,7 +730,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:C02-02-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-02-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:C02-02-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-02-02</span></td>
               </tr>
               <tr>
                 <td>38</td>
@@ -742,7 +741,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:A01-06-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A01-06-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:A01-06-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A01-06-09</span></td>
               </tr>
               <tr>
                 <td>39</td>
@@ -753,7 +752,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
               </tr>
               <tr>
                 <td>40</td>
@@ -764,7 +763,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>41</td>
@@ -797,7 +796,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存6件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
               </tr>
               <tr>
                 <td>44</td>
@@ -808,7 +807,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
               </tr>
               <tr>
                 <td>45</td>
@@ -819,7 +818,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存9件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
               </tr>
               <tr>
                 <td>46</td>
@@ -830,7 +829,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:2A02-06-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-11</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A02-06-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-11</span></td>
               </tr>
               <tr>
                 <td>47</td>
@@ -841,15 +840,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S5H92C" data-vin="LFPH4ACP3P2A21822" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S5H92C" data-vin="LFPH4ACP3P2A21822" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-3" onclick="toggleDetail(3,event)" ontouchend="toggleDetail(3,event)">▶</button></td>
         <td><strong>粤S5H92C</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP3P2A21822</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>6</td>
         <td>6</td>
         <td>
@@ -881,10 +880,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前组合灯Ⅱ总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/26 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:大修房02 · <span style="color:#0D6EFD;font-weight:600;">P.=替代码+其他配件(3711050HF02AP.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房02</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -895,7 +894,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存5件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -906,7 +905,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存2件 · 货位:索-大货架02-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2803431HF01.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -917,7 +916,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存7件 · 货位:2A03-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存5件 · 货位:2A03-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-03-04</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -928,7 +927,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
               </tr>
               <tr>
                 <td>6</td>
@@ -939,15 +938,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S98Z0E" data-vin="LFPH4ACP6P2B77014" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S98Z0E" data-vin="LFPH4ACP6P2B77014" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-4" onclick="toggleDetail(4,event)" ontouchend="toggleDetail(4,event)">▶</button></td>
         <td><strong>粤S98Z0E</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP6P2B77014</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>32</td>
         <td>31</td>
         <td>
@@ -1056,10 +1055,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>后保险杠横梁总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:07/04 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位: · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804510HF01P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/</span></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -1089,10 +1088,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>左后组合灯Ⅱ盖板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/24 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:A01-07-11 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3716076HF01P)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A01-07-11</span></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -1133,10 +1132,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>行李箱盖锁护套-黑色</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/24 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2B02-01-13 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-13</span></td>
               </tr>
               <tr>
                 <td>16</td>
@@ -1158,7 +1157,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:大修房 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:大修房 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房</span></td>
               </tr>
               <tr>
                 <td>18</td>
@@ -1213,7 +1212,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2B02-05-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-05-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2B02-05-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-05-07</span></td>
               </tr>
               <tr>
                 <td>23</td>
@@ -1232,10 +1231,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右排气口装饰罩焊接总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/24 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2A03-01-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-01-04</span></td>
               </tr>
               <tr>
                 <td>25</td>
@@ -1312,7 +1311,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存4件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
               </tr>
               <tr>
                 <td>32</td>
@@ -1325,13 +1324,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">2026/07/09 · 库存2件 · 货位:索赔房大货架02-06 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804111HF01S1.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架02-06</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SDQ6543" data-vin="LFPHC7PP1R1A80621" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SDQ6543" data-vin="LFPHC7PP1R1A80621" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-5" onclick="toggleDetail(5,event)" ontouchend="toggleDetail(5,event)">▶</button></td>
         <td><strong>粤SDQ6543</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPHC7PP1R1A80621</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -1379,13 +1378,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/04 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SF86175" data-vin="LFPH3CPP7T2A12866" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SF86175" data-vin="LFPH3CPP7T2A12866" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-6" onclick="toggleDetail(6,event)" ontouchend="toggleDetail(6,event)">▶</button></td>
         <td><strong>粤SF86175</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3CPP7T2A12866</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -1433,13 +1432,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SF8W49" data-vin="LFPH3ACE5S2C27105" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SF8W49" data-vin="LFPH3ACE5S2C27105" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-7" onclick="toggleDetail(7,event)" ontouchend="toggleDetail(7,event)">▶</button></td>
         <td><strong>粤SF8W49</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE5S2C27105</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -1485,15 +1484,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存4件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SFK4688" data-vin="LFPH4CPP7R1B04684" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SFK4688" data-vin="LFPH4CPP7R1B04684" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-8" onclick="toggleDetail(8,event)" ontouchend="toggleDetail(8,event)">▶</button></td>
         <td><strong>粤SFK4688</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4CPP7R1B04684</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -1530,13 +1529,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/26 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SJ789R" data-vin="LFPH4BCPXM2L76162" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SJ789R" data-vin="LFPH4BCPXM2L76162" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-9" onclick="toggleDetail(9,event)" ontouchend="toggleDetail(9,event)">▶</button></td>
         <td><strong>粤SJ789R</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCPXM2L76162</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -1573,27 +1572,27 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SX428R" data-vin="LFPH4ACPXS2B92768" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SX428R" data-vin="LFPH4ACPXS2B92768" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-10" onclick="toggleDetail(10,event)" ontouchend="toggleDetail(10,event)">▶</button></td>
         <td><strong>粤SX428R</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACPXS2B92768</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>2</td>
-        <td>2</td>
+        <td>1</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:100%;background:#198754;"></div></div>
-            <span style="font-weight:600;font-size:12px;">100%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:50%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">50%</span>
           </div>
         </td>
-        <td><span class="tag tag-ready">✅ 可开工</span></td>
+        <td><span class="tag tag-partial">🟡 部分就绪</span></td>
       </tr>
       <tr class="part-detail" id="detail-10">
         <td colspan="10" style="padding:0;">
-          <table style="margin:0;border-collapse:collapse;border-left:4px solid #198754;">
-            <thead><tr style="background:#D4EDDA;">
+          <table style="margin:0;border-collapse:collapse;border-left:4px solid #FD7E14;">
+            <thead><tr style="background:#FFF3CD;">
               <th style="width:30px;"></th>
               <th>原厂编码</th>
               <th>替代码</th>
@@ -1622,18 +1621,18 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右门槛装饰板总成（底漆）</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存1件 · 货位:索赔房货架02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房货架02</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="豫VLB377" data-vin="LFPH4BCP1M2L59931" data-orderdate="06/24" data-waitdays="23">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="豫VLB377" data-vin="LFPH4BCP1M2L59931" data-orderdate="06/24" data-waitdays="25">
         <td><button class="expand-btn" id="btn-expand-11" onclick="toggleDetail(11,event)" ontouchend="toggleDetail(11,event)">▶</button></td>
         <td><strong>豫VLB377</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCP1M2L59931</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/24</td>
-        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">25天</span></td>
         <td>18</td>
         <td>17</td>
         <td>
@@ -1668,7 +1667,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2B02-01-16 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-16</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:2B02-01-16 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-16</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -1857,13 +1856,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/25 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S60S9S" data-vin="LFPH3ACP1N1E00839" data-orderdate="06/25" data-waitdays="22">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S60S9S" data-vin="LFPH3ACP1N1E00839" data-orderdate="06/25" data-waitdays="24">
         <td><button class="expand-btn" id="btn-expand-12" onclick="toggleDetail(12,event)" ontouchend="toggleDetail(12,event)">▶</button></td>
         <td><strong>粤S60S9S</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACP1N1E00839</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/25</td>
-        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">24天</span></td>
         <td>6</td>
         <td>5</td>
         <td>
@@ -1955,13 +1954,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/25 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂J3U203" data-vin="LFPH3APP4S1D70323" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂J3U203" data-vin="LFPH3APP4S1D70323" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-13" onclick="toggleDetail(13,event)" ontouchend="toggleDetail(13,event)">▶</button></td>
         <td><strong>桂J3U203</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3APP4S1D70323</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -2009,13 +2008,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">2026/03/02 · 库存1件 · 货位:C02-02-13 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/C02-02-13</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤EN65G6" data-vin="LFPH4ACP7S2A27664" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤EN65G6" data-vin="LFPH4ACP7S2A27664" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-14" onclick="toggleDetail(14,event)" ontouchend="toggleDetail(14,event)">▶</button></td>
         <td><strong>粤EN65G6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP7S2A27664</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -2063,13 +2062,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S00R6U" data-vin="LFPH4ACP1N2A77514" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S00R6U" data-vin="LFPH4ACP1N2A77514" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-15" onclick="toggleDetail(15,event)" ontouchend="toggleDetail(15,event)">▶</button></td>
         <td><strong>粤S00R6U</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP1N2A77514</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>4</td>
         <td>4</td>
         <td>
@@ -2139,13 +2138,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S00R6U" data-vin="LFPH4ACP1N2A77514" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S00R6U" data-vin="LFPH4ACP1N2A77514" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-16" onclick="toggleDetail(16,event)" ontouchend="toggleDetail(16,event)">▶</button></td>
         <td><strong>粤S00R6U</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP1N2A77514</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>6</td>
         <td>6</td>
         <td>
@@ -2202,7 +2201,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存2件 · 货位:索-大货架02-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2803431HF01.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -2213,7 +2212,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A03-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-02-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-02-04</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -2235,15 +2234,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S826T6" data-vin="LFPH4ACL8R2B29143" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S826T6" data-vin="LFPH4ACL8R2B29143" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-17" onclick="toggleDetail(17,event)" ontouchend="toggleDetail(17,event)">▶</button></td>
         <td><strong>粤S826T6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACL8R2B29143</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>8</td>
         <td>8</td>
         <td>
@@ -2357,13 +2356,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/27 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SFT8249" data-vin="LFPH3APPXT2A36745" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SFT8249" data-vin="LFPH3APPXT2A36745" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-18" onclick="toggleDetail(18,event)" ontouchend="toggleDetail(18,event)">▶</button></td>
         <td><strong>粤SFT8249</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3APPXT2A36745</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>3</td>
         <td>3</td>
         <td>
@@ -2422,13 +2421,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SU99B4" data-vin="LFPH3ACE6S2C69301" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SU99B4" data-vin="LFPH3ACE6S2C69301" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-19" onclick="toggleDetail(19,event)" ontouchend="toggleDetail(19,event)">▶</button></td>
         <td><strong>粤SU99B4</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE6S2C69301</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>6</td>
         <td>6</td>
         <td>
@@ -2474,7 +2473,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
-                <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/办公室-03-01) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -2485,7 +2484,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
-                <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B01-05-05) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -2520,13 +2519,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索赔房货架05) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SU99B4" data-vin="LFPH3ACE6S2C69301" data-orderdate="06/26" data-waitdays="21">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SU99B4" data-vin="LFPH3ACE6S2C69301" data-orderdate="06/26" data-waitdays="23">
         <td><button class="expand-btn" id="btn-expand-20" onclick="toggleDetail(20,event)" ontouchend="toggleDetail(20,event)">▶</button></td>
         <td><strong>粤SU99B4</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE6S2C69301</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/26</td>
-        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">23天</span></td>
         <td>9</td>
         <td>6</td>
         <td>
@@ -2651,27 +2650,27 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/25 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="湘D771B8" data-vin="LFPH4ACP2R2B54297" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘D771B8" data-vin="LFPH4ACP2R2B54297" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-21" onclick="toggleDetail(21,event)" ontouchend="toggleDetail(21,event)">▶</button></td>
         <td><strong>湘D771B8</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP2R2B54297</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>12</td>
-        <td>11</td>
+        <td>12</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:92%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">92%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:100%;background:#198754;"></div></div>
+            <span style="font-weight:600;font-size:12px;">100%</span>
           </div>
         </td>
-        <td><span class="tag tag-partial">🟡 部分就绪</span></td>
+        <td><span class="tag tag-ready">✅ 可开工</span></td>
       </tr>
       <tr class="part-detail" id="detail-21">
         <td colspan="10" style="padding:0;">
-          <table style="margin:0;border-collapse:collapse;border-left:4px solid #FD7E14;">
-            <thead><tr style="background:#FFF3CD;">
+          <table style="margin:0;border-collapse:collapse;border-left:4px solid #198754;">
+            <thead><tr style="background:#D4EDDA;">
               <th style="width:30px;"></th>
               <th>原厂编码</th>
               <th>替代码</th>
@@ -2689,10 +2688,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前组合灯Ⅱ总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/29 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:大修房02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房02</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -2711,10 +2710,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前翼子板</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#DC354520;color:#DC3545;">库存不足</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">⚠️ 库存1件已被占用 · 总需求2件 · 需等订货 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位:Z-翼子板区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-翼子板区</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -2736,7 +2735,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
               </tr>
               <tr>
                 <td>6</td>
@@ -2747,7 +2746,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:2A02-05-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A02-05-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-10</span></td>
               </tr>
               <tr>
                 <td>7</td>
@@ -2758,7 +2757,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:2A02-06-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-11</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A02-06-11 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-11</span></td>
               </tr>
               <tr>
                 <td>8</td>
@@ -2769,7 +2768,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存6件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -2780,7 +2779,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存9件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -2791,7 +2790,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>11</td>
@@ -2813,15 +2812,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S10H3Z" data-vin="LFPH4ACLXR2B03420" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S10H3Z" data-vin="LFPH4ACLXR2B03420" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-22" onclick="toggleDetail(22,event)" ontouchend="toggleDetail(22,event)">▶</button></td>
         <td><strong>粤S10H3Z</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACLXR2B03420</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>4</td>
         <td>1</td>
         <td>
@@ -2891,13 +2890,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S234QB" data-vin="LFPH3ACE4R2C22018" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S234QB" data-vin="LFPH3ACE4R2C22018" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-23" onclick="toggleDetail(23,event)" ontouchend="toggleDetail(23,event)">▶</button></td>
         <td><strong>粤S234QB</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE4R2C22018</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>3</td>
         <td>3</td>
         <td>
@@ -2929,10 +2928,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>后组合灯Ⅱ总成-低配</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:06/25 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位: · <span style="color:#198754;font-size:10px;">卡派:配件仓库/</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -2954,15 +2953,15 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存4件 · 货位:索赔房大货架01-04 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2804121HF01115P.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房大货架01-04</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S61TM9" data-vin="LFB1E6077MJA63031" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S61TM9" data-vin="LFB1E6077MJA63031" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-24" onclick="toggleDetail(24,event)" ontouchend="toggleDetail(24,event)">▶</button></td>
         <td><strong>粤S61TM9</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1E6077MJA63031</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>7</td>
         <td>7</td>
         <td>
@@ -3065,13 +3064,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/04/27 · 库存1件 · 货位:索赔房 大货架03-02</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S8S6H0" data-vin="LFPH4ACL9S2B82584" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S8S6H0" data-vin="LFPH4ACL9S2B82584" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-25" onclick="toggleDetail(25,event)" ontouchend="toggleDetail(25,event)">▶</button></td>
         <td><strong>粤S8S6H0</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACL9S2B82584</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>7</td>
         <td>7</td>
         <td>
@@ -3174,13 +3173,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存1件 · 货位:索-大货架 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S8Z60K" data-vin="LFPH4ACPXK1A39345" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S8Z60K" data-vin="LFPH4ACPXK1A39345" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-26" onclick="toggleDetail(26,event)" ontouchend="toggleDetail(26,event)">▶</button></td>
         <td><strong>粤S8Z60K</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACPXK1A39345</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>16</td>
         <td>16</td>
         <td>
@@ -3382,13 +3381,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SAC8225" data-vin="LFPHC7CP1S1D82857" data-orderdate="06/27" data-waitdays="20">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SAC8225" data-vin="LFPHC7CP1S1D82857" data-orderdate="06/27" data-waitdays="22">
         <td><button class="expand-btn" id="btn-expand-27" onclick="toggleDetail(27,event)" ontouchend="toggleDetail(27,event)">▶</button></td>
         <td><strong>粤SAC8225</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPHC7CP1S1D82857</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/27</td>
-        <td><span style="color:#DC3545;font-weight:700;">20天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">22天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -3425,13 +3424,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/29 · 郑州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A07-02) | DMS: 郑州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤BG79928" data-vin="LFPH4CPP2R1B03376" data-orderdate="06/28" data-waitdays="19">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤BG79928" data-vin="LFPH4CPP2R1B03376" data-orderdate="06/28" data-waitdays="21">
         <td><button class="expand-btn" id="btn-expand-28" onclick="toggleDetail(28,event)" ontouchend="toggleDetail(28,event)">▶</button></td>
         <td><strong>粤BG79928</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4CPP2R1B03376</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/28</td>
-        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -3468,13 +3467,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:06/30 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S0QW55" data-vin="LFPH4APP4R1A26983" data-orderdate="06/28" data-waitdays="19">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S0QW55" data-vin="LFPH4APP4R1A26983" data-orderdate="06/28" data-waitdays="21">
         <td><button class="expand-btn" id="btn-expand-29" onclick="toggleDetail(29,event)" ontouchend="toggleDetail(29,event)">▶</button></td>
         <td><strong>粤S0QW55</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APP4R1A26983</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/28</td>
-        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -3511,13 +3510,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/13 · 库存1件 · 货位:C02-02-08</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S71H5L" data-vin="LFPH4APPXR1A65853" data-orderdate="06/28" data-waitdays="19">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S71H5L" data-vin="LFPH4APPXR1A65853" data-orderdate="06/28" data-waitdays="21">
         <td><button class="expand-btn" id="btn-expand-30" onclick="toggleDetail(30,event)" ontouchend="toggleDetail(30,event)">▶</button></td>
         <td><strong>粤S71H5L</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APPXR1A65853</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/28</td>
-        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
         <td>4</td>
         <td>4</td>
         <td>
@@ -3587,13 +3586,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/04 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S7F10U" data-vin="LFPH4ACP7L1A01959" data-orderdate="06/28" data-waitdays="19">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S7F10U" data-vin="LFPH4ACP7L1A01959" data-orderdate="06/28" data-waitdays="21">
         <td><button class="expand-btn" id="btn-expand-31" onclick="toggleDetail(31,event)" ontouchend="toggleDetail(31,event)">▶</button></td>
         <td><strong>粤S7F10U</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP7L1A01959</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/28</td>
-        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
         <td>23</td>
         <td>20</td>
         <td>
@@ -3872,13 +3871,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S826T6" data-vin="LFPH4ACL8R2B29143" data-orderdate="06/28" data-waitdays="19">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S826T6" data-vin="LFPH4ACL8R2B29143" data-orderdate="06/28" data-waitdays="21">
         <td><button class="expand-btn" id="btn-expand-32" onclick="toggleDetail(32,event)" ontouchend="toggleDetail(32,event)">▶</button></td>
         <td><strong>粤S826T6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACL8R2B29143</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/28</td>
-        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">21天</span></td>
         <td>3</td>
         <td>3</td>
         <td>
@@ -3937,13 +3936,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:索赔房小货架01-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房小货架01-03</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S58Y2J" data-vin="LFPH4ACP3P2B37487" data-orderdate="06/30" data-waitdays="17">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S58Y2J" data-vin="LFPH4ACP3P2B37487" data-orderdate="06/30" data-waitdays="19">
         <td><button class="expand-btn" id="btn-expand-33" onclick="toggleDetail(33,event)" ontouchend="toggleDetail(33,event)">▶</button></td>
         <td><strong>粤S58Y2J</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP3P2B37487</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/30</td>
-        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -3978,7 +3977,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -3991,13 +3990,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/16 · 库存4件 · 货位:A02-08-02</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S71H5L" data-vin="LFPH4APPXR1A65853" data-orderdate="06/30" data-waitdays="17">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S71H5L" data-vin="LFPH4APPXR1A65853" data-orderdate="06/30" data-waitdays="19">
         <td><button class="expand-btn" id="btn-expand-34" onclick="toggleDetail(34,event)" ontouchend="toggleDetail(34,event)">▶</button></td>
         <td><strong>粤S71H5L</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APPXR1A65853</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/30</td>
-        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -4034,13 +4033,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:07/01 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SCV746" data-vin="LFPH4ACP8S2A61225" data-orderdate="06/30" data-waitdays="17">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SCV746" data-vin="LFPH4ACP8S2A61225" data-orderdate="06/30" data-waitdays="19">
         <td><button class="expand-btn" id="btn-expand-35" onclick="toggleDetail(35,event)" ontouchend="toggleDetail(35,event)">▶</button></td>
         <td><strong>粤SCV746</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP8S2A61225</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/30</td>
-        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
         <td>43</td>
         <td>36</td>
         <td>
@@ -4075,7 +4074,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:索-大货架03-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架03-10</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -4097,7 +4096,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -4108,7 +4107,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-04-06</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -4119,7 +4118,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存9件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A02-05-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-09</span></td>
               </tr>
               <tr>
                 <td>6</td>
@@ -4130,7 +4129,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存6件 · 货位:2A03-05-01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-01</span></td>
               </tr>
               <tr>
                 <td>7</td>
@@ -4141,7 +4140,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存5件 · 货位:2A02-05-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A02-05-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-05-10</span></td>
               </tr>
               <tr>
                 <td>8</td>
@@ -4152,7 +4151,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A03-05-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-02</span></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -4174,7 +4173,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存8件 · 货位:2A03-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-02-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存7件 · 货位:2A03-02-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-02-04</span></td>
               </tr>
               <tr>
                 <td>11</td>
@@ -4229,7 +4228,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存5件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存3件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
               </tr>
               <tr>
                 <td>16</td>
@@ -4237,10 +4236,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>左前角超声波传感器支架（底漆）</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2B02-03-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-03-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/03 · 消化库存</td>
               </tr>
               <tr>
                 <td>17</td>
@@ -4262,7 +4261,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A02-01-09) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>19</td>
@@ -4394,7 +4393,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(同日)</td>
-                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B02-05-12) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>31</td>
@@ -4471,7 +4470,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>38</td>
@@ -4539,13 +4538,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤TG1L26" data-vin="LFPH4ACP7S2A03610" data-orderdate="06/30" data-waitdays="17">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤TG1L26" data-vin="LFPH4ACP7S2A03610" data-orderdate="06/30" data-waitdays="19">
         <td><button class="expand-btn" id="btn-expand-36" onclick="toggleDetail(36,event)" ontouchend="toggleDetail(36,event)">▶</button></td>
         <td><strong>粤TG1L26</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP7S2A03610</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>06/30</td>
-        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">19天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -4582,13 +4581,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/02 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂D5H820" data-vin="LFPH4ACE0L1B23335" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂D5H820" data-vin="LFPH4ACE0L1B23335" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-37" onclick="toggleDetail(37,event)" ontouchend="toggleDetail(37,event)">▶</button></td>
         <td><strong>桂D5H820</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACE0L1B23335</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>3</td>
         <td>3</td>
         <td>
@@ -4647,13 +4646,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂D5H820" data-vin="LFPH4ACE0L1B23335" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="桂D5H820" data-vin="LFPH4ACE0L1B23335" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-38" onclick="toggleDetail(38,event)" ontouchend="toggleDetail(38,event)">▶</button></td>
         <td><strong>桂D5H820</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACE0L1B23335</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>4</td>
         <td>4</td>
         <td>
@@ -4723,13 +4722,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="waiting" data-plate="桂LZN552，" data-vin="LFPH4ACP3R2A49915" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="waiting" data-plate="桂LZN552，" data-vin="LFPH4ACP3R2A49915" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-39" onclick="toggleDetail(39,event)" ontouchend="toggleDetail(39,event)">▶</button></td>
         <td><strong>桂LZN552，</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP3R2A49915</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>2</td>
         <td>0</td>
         <td>
@@ -4777,13 +4776,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘G6Q522" data-vin="LFPH3ACE1P2B21645" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘G6Q522" data-vin="LFPH3ACE1P2B21645" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-40" onclick="toggleDetail(40,event)" ontouchend="toggleDetail(40,event)">▶</button></td>
         <td><strong>湘G6Q522</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE1P2B21645</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>5</td>
         <td>5</td>
         <td>
@@ -4864,13 +4863,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/04 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘G6Q522" data-vin="LFPH3ACE1P2B21645" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="湘G6Q522" data-vin="LFPH3ACE1P2B21645" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-41" onclick="toggleDetail(41,event)" ontouchend="toggleDetail(41,event)">▶</button></td>
         <td><strong>湘G6Q522</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE1P2B21645</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>12</td>
         <td>12</td>
         <td>
@@ -4905,7 +4904,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -4938,7 +4937,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存5件 · 货位:2A03-05-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存4件 · 货位:2A03-05-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-05</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -4993,7 +4992,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -5028,13 +5027,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±2天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索-大货架03-10)</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S09SH6" data-vin="LFPH4APPXS1A02855" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S09SH6" data-vin="LFPH4APPXS1A02855" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-42" onclick="toggleDetail(42,event)" ontouchend="toggleDetail(42,event)">▶</button></td>
         <td><strong>粤S09SH6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APPXS1A02855</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -5071,13 +5070,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B01-04-01) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S09SH6" data-vin="LFPH4APPXS1A02855" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S09SH6" data-vin="LFPH4APPXS1A02855" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-43" onclick="toggleDetail(43,event)" ontouchend="toggleDetail(43,event)">▶</button></td>
         <td><strong>粤S09SH6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APPXS1A02855</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>10</td>
         <td>10</td>
         <td>
@@ -5213,13 +5212,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S0W2X7" data-vin="LFB1E6071KJB35306" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S0W2X7" data-vin="LFB1E6071KJB35306" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-44" onclick="toggleDetail(44,event)" ontouchend="toggleDetail(44,event)">▶</button></td>
         <td><strong>粤S0W2X7</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1E6071KJB35306</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>9</td>
         <td>7</td>
         <td>
@@ -5344,13 +5343,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存1件 · 货位:大修房02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房02</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S16B6E" data-vin="LFB1E6077MJE46113" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S16B6E" data-vin="LFB1E6077MJE46113" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-45" onclick="toggleDetail(45,event)" ontouchend="toggleDetail(45,event)">▶</button></td>
         <td><strong>粤S16B6E</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1E6077MJE46113</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>10</td>
         <td>10</td>
         <td>
@@ -5473,7 +5472,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C01-02-16) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -5486,13 +5485,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S16B6E" data-vin="LFB1E6077MJE46113" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S16B6E" data-vin="LFB1E6077MJE46113" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-46" onclick="toggleDetail(46,event)" ontouchend="toggleDetail(46,event)">▶</button></td>
         <td><strong>粤S16B6E</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1E6077MJE46113</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>7</td>
         <td>7</td>
         <td>
@@ -5527,7 +5526,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C01-02-16) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -5595,13 +5594,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-47" onclick="toggleDetail(47,event)" ontouchend="toggleDetail(47,event)">▶</button></td>
         <td><strong>粤S19S4S</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCP5S2L04430</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>14</td>
         <td>13</td>
         <td>
@@ -5781,13 +5780,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/01 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-48" onclick="toggleDetail(48,event)" ontouchend="toggleDetail(48,event)">▶</button></td>
         <td><strong>粤S19S4S</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCP5S2L04430</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -5835,13 +5834,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S19S4S" data-vin="LFPH4BCP5S2L04430" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-49" onclick="toggleDetail(49,event)" ontouchend="toggleDetail(49,event)">▶</button></td>
         <td><strong>粤S19S4S</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCP5S2L04430</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -5878,13 +5877,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S2H31F" data-vin="LFPH3ACE1R2C14572" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S2H31F" data-vin="LFPH3ACE1R2C14572" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-50" onclick="toggleDetail(50,event)" ontouchend="toggleDetail(50,event)">▶</button></td>
         <td><strong>粤S2H31F</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE1R2C14572</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>7</td>
         <td>7</td>
         <td>
@@ -5960,10 +5959,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>散热器格栅总成-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:大修房01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房01</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/03 · 消化库存</td>
               </tr>
               <tr>
                 <td>6</td>
@@ -5987,13 +5986,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A08-03-01) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S576FQ" data-vin="LFPH4ACP2S2A38930" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S576FQ" data-vin="LFPH4ACP2S2A38930" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-51" onclick="toggleDetail(51,event)" ontouchend="toggleDetail(51,event)">▶</button></td>
         <td><strong>粤S576FQ</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP2S2A38930</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -6041,13 +6040,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:07/10 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S7317C" data-vin="LFPH4ACP6S2C76571" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S7317C" data-vin="LFPH4ACP6S2C76571" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-52" onclick="toggleDetail(52,event)" ontouchend="toggleDetail(52,event)">▶</button></td>
         <td><strong>粤S7317C</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP6S2C76571</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -6084,13 +6083,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-53" onclick="toggleDetail(53,event)" ontouchend="toggleDetail(53,event)">▶</button></td>
         <td><strong>粤S956MG</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APP4R1A37322</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>6</td>
         <td>6</td>
         <td>
@@ -6182,13 +6181,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/28 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-54" onclick="toggleDetail(54,event)" ontouchend="toggleDetail(54,event)">▶</button></td>
         <td><strong>粤S956MG</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APP4R1A37322</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -6236,13 +6235,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2B01-01-03) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S956MG" data-vin="LFPH4APP4R1A37322" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-55" onclick="toggleDetail(55,event)" ontouchend="toggleDetail(55,event)">▶</button></td>
         <td><strong>粤S956MG</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APP4R1A37322</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>10</td>
         <td>10</td>
         <td>
@@ -6378,19 +6377,19 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">车牌+编码(车牌精准)</td>
                 <td style="font-size:11px;color:#666;">到货:06/27 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S96Q4P" data-vin="LFPH3ACE4R2C61093" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S96Q4P" data-vin="LFPH3ACE4R2C61093" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-56" onclick="toggleDetail(56,event)" ontouchend="toggleDetail(56,event)">▶</button></td>
         <td><strong>粤S96Q4P</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE4R2C61093</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>69</td>
-        <td>42</td>
+        <td>43</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:61%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">61%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:62%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">62%</span>
           </div>
         </td>
         <td><span class="tag tag-partial">🟡 部分就绪</span></td>
@@ -6452,7 +6451,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A04-02-01) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -6518,7 +6517,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:A06-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A06-03</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位:A06-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A06-03</span></td>
               </tr>
               <tr>
                 <td>11</td>
@@ -6540,7 +6539,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/办公室-03-01) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>13</td>
@@ -6548,10 +6547,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>前上悬置总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">出库:07/08 · 消化库存</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2B01-05-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B01-05-05</span></td>
               </tr>
               <tr>
                 <td>14</td>
@@ -6584,7 +6583,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索-小货架-05) | DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>17</td>
@@ -6793,7 +6792,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/24 · 库存1件 · 货位:2B02-03-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-03-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2B02-03-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-03-08</span></td>
               </tr>
               <tr>
                 <td>36</td>
@@ -6801,10 +6800,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前叶下铁支架   后</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">-</td>
-                <td style="font-size:11px;color:#DC3545;"></td>
+                <td style="font-size:11px;">编码</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2B02-04-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-04-06</span></td>
               </tr>
               <tr>
                 <td>37</td>
@@ -6878,10 +6877,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右前翼子板支架I总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
+                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">-</td>
-                <td style="font-size:11px;color:#DC3545;"></td>
+                <td style="font-size:11px;">编码</td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存1件 · 货位:2B02-01-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-01-08</span></td>
               </tr>
               <tr>
                 <td>44</td>
@@ -6969,7 +6968,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/大修房01) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>52</td>
@@ -6991,7 +6990,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存5件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存3件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
               </tr>
               <tr>
                 <td>54</td>
@@ -6999,10 +6998,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>左前角超声波传感器支架（底漆）</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2B02-03-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-03-06</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>55</td>
@@ -7013,7 +7012,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:2B02-05-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-05-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:2B02-05-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-05-07</span></td>
               </tr>
               <tr>
                 <td>56</td>
@@ -7024,7 +7023,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>57</td>
@@ -7134,7 +7133,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>67</td>
@@ -7169,13 +7168,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±2天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差2天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/索-大货架03-10)</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SC12T6" data-vin="LFPH4BCP6N2L24612" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SC12T6" data-vin="LFPH4BCP6N2L24612" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-57" onclick="toggleDetail(57,event)" ontouchend="toggleDetail(57,event)">▶</button></td>
         <td><strong>粤SC12T6</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4BCP6N2L24612</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>2</td>
         <td>2</td>
         <td>
@@ -7223,13 +7222,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/2A06-02) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="waiting" data-plate="粤SC8727" data-vin="LFPH4CPP2T2A63320" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="waiting" data-plate="粤SC8727" data-vin="LFPH4CPP2T2A63320" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-58" onclick="toggleDetail(58,event)" ontouchend="toggleDetail(58,event)">▶</button></td>
         <td><strong>粤SC8727</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4CPP2T2A63320</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>0</td>
         <td>
@@ -7266,13 +7265,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SC8727" data-vin="LFPH4CPP2T2A63320" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SC8727" data-vin="LFPH4CPP2T2A63320" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-59" onclick="toggleDetail(59,event)" ontouchend="toggleDetail(59,event)">▶</button></td>
         <td><strong>粤SC8727</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4CPP2T2A63320</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>3</td>
         <td>2</td>
         <td>
@@ -7331,13 +7330,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SH494X" data-vin="LFB1F0688M2L70516" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SH494X" data-vin="LFB1F0688M2L70516" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-60" onclick="toggleDetail(60,event)" ontouchend="toggleDetail(60,event)">▶</button></td>
         <td><strong>粤SH494X</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1F0688M2L70516</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -7374,13 +7373,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SQY058" data-vin="LFPH4APP9S1A76932" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤SQY058" data-vin="LFPH4APP9S1A76932" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-61" onclick="toggleDetail(61,event)" ontouchend="toggleDetail(61,event)">▶</button></td>
         <td><strong>粤SQY058</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4APP9S1A76932</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>3</td>
         <td>3</td>
         <td>
@@ -7439,13 +7438,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 · 消化旧库存 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/C01-02-01) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤TA0A84" data-vin="LFPH3ACE3S2C69773" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤TA0A84" data-vin="LFPH3ACE3S2C69773" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-62" onclick="toggleDetail(62,event)" ontouchend="toggleDetail(62,event)">▶</button></td>
         <td><strong>粤TA0A84</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE3S2C69773</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>11</td>
         <td>11</td>
         <td>
@@ -7557,7 +7556,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#0D6EFD20;color:#0D6EFD;">已到货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码+日期(±1天)</td>
-                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/大修房01) | DMS: 广州库</span></td>
+                <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -7592,13 +7591,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">到货:07/04 · 广州库 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/A05-01-02) | DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="豫RM520Q" data-vin="LFPH3ACE7S2C64205" data-orderdate="07/02" data-waitdays="15">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="豫RM520Q" data-vin="LFPH3ACE7S2C64205" data-orderdate="07/02" data-waitdays="17">
         <td><button class="expand-btn" id="btn-expand-63" onclick="toggleDetail(63,event)" ontouchend="toggleDetail(63,event)">▶</button></td>
         <td><strong>豫RM520Q</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE7S2C64205</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/02</td>
-        <td><span style="color:#DC3545;font-weight:700;">15天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">17天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -7635,13 +7634,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码</td>
                 <td style="font-size:11px;color:#DC3545;">出库:06/26 · 消化库存</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S7AH91" data-vin="LFPH4ACL6S2A40628" data-orderdate="07/03" data-waitdays="14">
+      <tr class="car-row" data-type="未分类" data-status="ready" data-plate="粤S7AH91" data-vin="LFPH4ACL6S2A40628" data-orderdate="07/03" data-waitdays="16">
         <td><button class="expand-btn" id="btn-expand-64" onclick="toggleDetail(64,event)" ontouchend="toggleDetail(64,event)">▶</button></td>
         <td><strong>粤S7AH91</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACL6S2A40628</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/03</td>
-        <td><span style="color:#DC3545;font-weight:700;">14天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">16天</span></td>
         <td>1</td>
         <td>1</td>
         <td>
@@ -7678,13 +7677,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(同日)</td>
                 <td style="font-size:11px;color:#666;">到货:07/05 · 广州库 · <span style="color:#198754;font-size:10px;">DMS: 广州库</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤LH0C21" data-vin="LFPH4ACP0N2A47338" data-orderdate="07/05" data-waitdays="12">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤LH0C21" data-vin="LFPH4ACP0N2A47338" data-orderdate="07/05" data-waitdays="14">
         <td><button class="expand-btn" id="btn-expand-65" onclick="toggleDetail(65,event)" ontouchend="toggleDetail(65,event)">▶</button></td>
         <td><strong>粤LH0C21</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP0N2A47338</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/05</td>
-        <td><span style="color:#DC3545;font-weight:700;">12天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">14天</span></td>
         <td>3</td>
         <td>2</td>
         <td>
@@ -7743,13 +7742,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天 · <span style="color:#198754;font-size:10px;">✅卡派有货(配件仓库/大修房01)</span></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S96F9U" data-vin="LFB1E6072MJE84560" data-orderdate="07/05" data-waitdays="12">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤S96F9U" data-vin="LFB1E6072MJE84560" data-orderdate="07/05" data-waitdays="14">
         <td><button class="expand-btn" id="btn-expand-66" onclick="toggleDetail(66,event)" ontouchend="toggleDetail(66,event)">▶</button></td>
         <td><strong>粤S96F9U</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFB1E6072MJE84560</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/05</td>
-        <td><span style="color:#DC3545;font-weight:700;">12天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">14天</span></td>
         <td>1</td>
         <td>0</td>
         <td>
@@ -7786,13 +7785,13 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">编码+日期(±1天)</td>
                 <td style="font-size:11px;color:#666;">订货处理中 ⚡日期差1天</td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SHH661" data-vin="LFPH3ACE7N2A21532" data-orderdate="07/05" data-waitdays="12">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="粤SHH661" data-vin="LFPH3ACE7N2A21532" data-orderdate="07/05" data-waitdays="14">
         <td><button class="expand-btn" id="btn-expand-67" onclick="toggleDetail(67,event)" ontouchend="toggleDetail(67,event)">▶</button></td>
         <td><strong>粤SHH661</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH3ACE7N2A21532</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/05</td>
-        <td><span style="color:#DC3545;font-weight:700;">12天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">14天</span></td>
         <td>38</td>
         <td>33</td>
         <td>
@@ -8011,10 +8010,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>散热器格栅总成-高亮黑</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:大修房01 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/大修房01</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/08 · 消化库存</td>
               </tr>
               <tr>
                 <td>19</td>
@@ -8025,7 +8024,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存2件 · 货位:索-大货架02-07 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-07</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存2件 · 货位:索-大货架02-08 · <span style="color:#0D6EFD;font-weight:600;">.=其他配件(2803431HF01.)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索-大货架02-08</span></td>
               </tr>
               <tr>
                 <td>20</td>
@@ -8069,7 +8068,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存5件 · 货位:2A03-05-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-05</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存4件 · 货位:2A03-05-05 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A03-05-05</span></td>
               </tr>
               <tr>
                 <td>24</td>
@@ -8080,7 +8079,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存5件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存3件 · 货位:2B02-02-09 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-02-09</span></td>
               </tr>
               <tr>
                 <td>25</td>
@@ -8088,10 +8087,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>左前角超声波传感器支架（底漆）</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2B02-03-06 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2B02-03-06</span></td>
+                <td style="font-size:11px;color:#DC3545;">出库:07/08 · 消化库存</td>
               </tr>
               <tr>
                 <td>26</td>
@@ -8168,7 +8167,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>33</td>
@@ -8236,19 +8235,19 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-size:11px;">-</td>
                 <td style="font-size:11px;color:#DC3545;"></td>
               </tr></tbody></table></td></tr>
-      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="苏EF9844" data-vin="LFPH4ACP7S2A52502" data-orderdate="07/05" data-waitdays="12">
+      <tr class="car-row" data-type="未分类" data-status="partial" data-plate="苏EF9844" data-vin="LFPH4ACP7S2A52502" data-orderdate="07/05" data-waitdays="14">
         <td><button class="expand-btn" id="btn-expand-68" onclick="toggleDetail(68,event)" ontouchend="toggleDetail(68,event)">▶</button></td>
         <td><strong>苏EF9844</strong></td>
         <td style="font-family:monospace;font-size:11px;">LFPH4ACP7S2A52502</td>
         <td><span class="tag" style="background:#6C757D20;color:#6C757D;border:1px solid #6C757D40;">未分类</span></td>
         <td>07/05</td>
-        <td><span style="color:#DC3545;font-weight:700;">12天</span></td>
+        <td><span style="color:#DC3545;font-weight:700;">14天</span></td>
         <td>51</td>
-        <td>42</td>
+        <td>40</td>
         <td>
           <div style="display:flex;align-items:center;gap:8px;">
-            <div class="progress-bar"><div class="progress-fill" style="width:82%;background:#FD7E14;"></div></div>
-            <span style="font-weight:600;font-size:12px;">82%</span>
+            <div class="progress-bar"><div class="progress-fill" style="width:78%;background:#FD7E14;"></div></div>
+            <span style="font-weight:600;font-size:12px;">78%</span>
           </div>
         </td>
         <td><span class="tag tag-partial">🟡 部分就绪</span></td>
@@ -8277,7 +8276,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/14 · 库存2件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/17 · 库存5件 · 货位:2A07旁 · <span style="color:#0D6EFD;font-weight:600;">P=厂家替代码(3711030HF01AP)</span> · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A07旁</span></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -8310,7 +8309,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:Z-机电区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-机电区</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存2件 · 货位:Z-机电区 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/Z-机电区</span></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -8395,10 +8394,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>左翼子板上护板总成-黑色</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/06/28 · 库存2件 · 货位:A06-03-04 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A06-03-04</span></td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/06/28 · 库存1件 · 货位:A06-03-04</td>
               </tr>
               <tr>
                 <td>13</td>
@@ -8417,10 +8416,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>发动机罩隔热衬垫总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:索赔房 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/索赔房</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>15</td>
@@ -8428,10 +8427,10 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td style="font-family:monospace;font-size:11px;">-</td>
                 <td>右侧空气弹簧总成</td>
                 <td>1</td>
-                <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
+                <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
-                <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存1件 · 货位:A07-02 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A07-02</span></td>
+                <td style="font-size:11px;">-</td>
+                <td style="font-size:11px;color:#DC3545;"></td>
               </tr>
               <tr>
                 <td>16</td>
@@ -8563,7 +8562,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#6C757D20;color:#6C757D;">未订货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/07/02 · 库存1件 · 货位:2A02-06-01</td>
+                <td style="font-size:11px;color:#DC3545;">历史库存 · 入库:2026/07/02 · 库存2件 · 货位:2A02-06-01</td>
               </tr>
               <tr>
                 <td>28</td>
@@ -8596,7 +8595,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span style="font-size:11px;color:#999;">-</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存4件 · 货位:A05-01-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A05-01-03</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:A05-01-03 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/A05-01-03</span></td>
               </tr>
               <tr>
                 <td>31</td>
@@ -8761,7 +8760,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
                 <td><span class="tag" style="background:#19875420;color:#198754;">有货</span></td>
                 <td><span class="tag" style="background:#19875420;color:#198754;font-weight:600;">✅ 已出库</span></td>
                 <td style="font-size:11px;">编码</td>
-                <td style="font-size:11px;color:#DC3545;">2026/07/12 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
+                <td style="font-size:11px;color:#DC3545;">2026/07/18 · 库存3件 · 货位:2A02-06-10 · <span style="color:#198754;font-size:10px;">卡派:配件仓库/2A02-06-10</span></td>
               </tr>
               <tr>
                 <td>46</td>
@@ -8831,7 +8830,7 @@ footer { text-align:center; padding:20px; color:#999; font-size:12px; }
               </tr></tbody></table></td></tr></tbody></table></div>
 
 <footer>
-  配件到货监控系统 v2.1 · 东莞腾达红旗体验中心 · 数据更新: 2026-07-17 10:00<br>
+  配件到货监控系统 v2.1 · 东莞腾达红旗体验中心 · 数据更新: 2026-07-19 10:00<br>
   <span style="font-size:10px;">四层匹配: ①卡派出库(plate+VIN) → ②DMS紧急(plate) → ③DMS常规(±2d) → ④库存(卡派)</span>
 </footer>
 
